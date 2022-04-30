@@ -20,7 +20,27 @@
 			<div class="temp info"></div>
 			<div class="condition info"></div>
 		</div>  
-		
+		<script>
+
+owState.getScrollX();
+  }
+  function getStyleObj(id){
+	var obj = null;
+	if(document.getElementById){
+	  obj = document.getElementById(id);
+	}else if(document.all){
+	  obj = document.all[id];
+	}else if(document.layers){
+	  obj = document.layers[id];
+	}
+	return ((typeof obj != 'undefined')&&
+		(typeof obj.style != 'undefined'))?
+					obj.style:obj;
+  }
+  function starObj(id, parent, prv){
+	var next,reset;
+	var divClip, div = getStyleObj("stars"+id);
+</script>
 	</body>
 </html>
 
